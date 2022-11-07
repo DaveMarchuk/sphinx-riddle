@@ -19,8 +19,32 @@ namespace SphinxRiddle {
 
       foreach(Sphinx riddy in rid1)
       {
+        int index = 0;
         Console.WriteLine("--- SPHINX ---");
         Console.WriteLine(riddy.RiddleQ);
+        string userInput = Console.ReadLine();
+        
+        if (userInput == riddy.Answer) {
+          Console.WriteLine("--- SPHINX ---");
+          Console.WriteLine("GOOD JOB. NEXT RIDDLE");
+          index++;
+
+          if (index == 3)  
+          {
+            Console.WriteLine("--- SPHINX ---");
+            Console.WriteLine("YOU WIN. YOU CAN PASS");
+            break;
+          }
+        
+        }
+        
+        else
+        {
+          Console.WriteLine("--- SPHINX ---");
+          Console.WriteLine("YOU LOOK REALLY TASTY");
+          Console.WriteLine("*CHOMP*");
+          break;
+        }
       }
     }
   }
